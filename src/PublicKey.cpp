@@ -46,7 +46,7 @@ bool PublicKey::isValid(const Data& data, enum TWPublicKeyType type) {
 
 /// Initializes a public key with a collection of bytes.
 ///
-/// @throws std::invalid_argument if the data is not a valid public key.
+/// \throws std::invalid_argument if the data is not a valid public key.
 PublicKey::PublicKey(const Data& data, enum TWPublicKeyType type) : type(type) {
     if (!isValid(data, type)) {
         throw std::invalid_argument("Invalid public key data");
